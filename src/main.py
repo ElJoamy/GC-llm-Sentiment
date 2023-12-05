@@ -2,7 +2,7 @@ import os
 import time
 import spacy
 import csv
-import src.telegram_bot as telegram_bot
+# import src.telegram_bot as telegram_bot
 import psutil
 from fastapi import FastAPI, UploadFile, File, HTTPException, status,Depends, Request
 from fastapi.responses import JSONResponse, Response, FileResponse
@@ -28,8 +28,8 @@ app = FastAPI(
     version=_SETTINGS.k_revision
 )
 
-def start_telegram_bot():
-    telegram_bot.bot.polling(none_stop=True)
+# def start_telegram_bot():
+#     telegram_bot.bot.polling(none_stop=True)
 
 nlp = spacy.load("es_core_news_sm")
 
@@ -197,5 +197,5 @@ def get_status():
 
 if __name__ == "__main__":
     import uvicorn
-    Thread(target=start_telegram_bot).start()
+    # Thread(target=start_telegram_bot).start()
     uvicorn.run("src.main:app", reload=True)
