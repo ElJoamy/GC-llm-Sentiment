@@ -1,6 +1,7 @@
 FROM python:3.11
 # ARG TELEGRAM_TOKEN
 # ENV TELEGRAM_TOKEN=$TELEGRAM_TOKEN
+ENV PORT 8080
 
 RUN apt-get update && apt-get install -y libgl1
 
@@ -10,7 +11,9 @@ COPY requirements.txt /
 
 RUN pip install -r requirements.txt
 
+RUN python -m spacy download es_core_news_sm
+
 COPY ./src /src
 #COPY .env /.env
 
-CMD uvicorn src.main:app --host 0.0.0.0
+CMD uvicorn src.main:app --host 0.0.0.0 --port ${PORT}
