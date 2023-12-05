@@ -34,11 +34,11 @@ La estructura de archivos del proyecto es la siguiente:
 
 ### Pasos para la Instalación
 1. Clona el repositorio:
-   ```
-   git clone https://github.com/ElJoamy/Docker-Yolo-FastApi-and-GC.git
+   ```bash
+   git clone https://github.com/ElJoamy/GC-llm-Sentiment.git
    ```
 2. Instala las dependencias:
-   ```
+   ```bash
    pip install -r requirements.txt
    ```
 
