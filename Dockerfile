@@ -1,7 +1,7 @@
 FROM python:3.11
 ARG TELEGRAM_TOKEN
 ENV TELEGRAM_TOKEN=$TELEGRAM_TOKEN
-ENV PORT 8000
+ENV PORT 8080
 
 RUN apt-get update && apt-get install -y libgl1
 
