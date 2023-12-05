@@ -1,0 +1,11 @@
+python-dotenv
+fastapi
+spacy
+psutil
+uvicorn
+python-multipart
+starlette
+requests
+pydantic
+transformers
+telebot
